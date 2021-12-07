@@ -1,0 +1,11 @@
+#mainContent {
+    margin-top: 4.3rem;
+    #content {
+        margin-top: 60px;
+    }
+}
+@import './hero/hero';
+@import './list/list';
+@import './detail/detail';
+@import './search/search';
+@import './favorite/favorite';
