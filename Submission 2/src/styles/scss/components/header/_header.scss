@@ -1,0 +1,87 @@
+@media screen and (min-width: 320px) {
+    .app-bar {
+        padding: 8px 16px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+        position: fixed;
+        width: -webkit-fill-available;
+        .app-bar__menu {
+            display: flex;
+            align-items: center;
+
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 18px;
+                padding: 8px;
+                cursor: pointer;
+
+                padding: 10px 15px;
+                border: 1px solid #b0b0b0;
+                border-radius: 5px;
+                transition: all ease-out 0.1s;
+
+                &:focus {
+                    border: 1px solid #ffce31;
+                    color: #ffce31;
+                    transition: all ease-in 0.1s;
+                }
+            }
+        }
+
+        .app-bar__brand {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                color: $color-primary;
+                font-size: 22px;
+                user-select: none;
+                font-weight: 500;
+            }
+        }
+
+        .app-bar__navigation {
+            position: absolute;
+            top: 60px;
+            left: -180px;
+            width: 150px;
+            transition: all 0.3s;
+            padding: 8px;
+            background-color: white;
+            overflow: hidden;
+            border-bottom-right-radius: 15px;
+            filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.25));
+
+            &.open {
+                left: 0;
+            }
+
+            ul li a {
+                display: inline-block;
+                text-decoration: none;
+                padding: 8px;
+                margin-bottom: 5px;
+                width: 100%;
+
+                font-size: 1.125rem;
+                color: #34364a;
+                font-weight: 500;
+                // padding: 1rem;
+
+                &.active {
+                    a {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

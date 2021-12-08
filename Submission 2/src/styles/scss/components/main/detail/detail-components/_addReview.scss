@@ -1,0 +1,93 @@
+@media screen and (min-width: 320px) {
+    form,
+    #searchResto {
+        margin-top: 35px;
+
+        .input-wrapper {
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .form-control {
+            display: block;
+            line-height: 2em;
+            margin: 0;
+            padding: 5px 10px;
+            width: 100%;
+            font-size: 1rem;
+            border: 1px solid #f4f4f4;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-weight: 500;
+            transition: 0.2s ease-in;
+            outline: none;
+
+            &:focus-visible {
+                outline: #ffaa00;
+            }
+        }
+
+        .control-label {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            bottom: 1.9rem;
+            color: #5d5d5d;
+            transition: 0.2s ease-in-out transform;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .form-control:placeholder-shown + .control-label {
+            visibility: hidden;
+            z-index: -1;
+            transition: 0.2s ease-in-out;
+        }
+
+        .form-control:not(:placeholder-shown) + .control-label,
+        .form-control:focus:not(:placeholder-shown) + .control-label {
+            visibility: visible;
+            z-index: 1;
+            opacity: 1;
+            transform: translateY(-15px);
+            transition: 0.2s ease-in-out transform;
+        }
+
+        textarea {
+            &.form-control {
+                margin-top: 2rem;
+
+                &:not(:placeholder-shown) + .control-label,
+                &:focus:not(:placeholder-shown) + .control-label {
+                    transform: translateY(-45px);
+                }
+            }
+        }
+
+        .btn-submit {
+            background: #ffaa00;
+            border-radius: 15px;
+            color: #fff;
+            border: none;
+            width: 120px;
+            height: 45px;
+            font-size: 1rem;
+            display: block;
+            margin-left: auto;
+
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                background: #ffc107;
+            }
+            &:active {
+                background: #ffaa00;
+                box-shadow: none;
+            }
+        }
+    }
+}

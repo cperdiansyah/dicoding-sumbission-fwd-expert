@@ -1,0 +1,26 @@
+.search-form {
+    margin-top: 7rem;
+}
+
+.query-search {
+    font-style: italic;
+    color: $text-dark;
+}
+
+search-result {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+#searchResto {
+    display: flex;
+    margin-top: 0;
+    input#search {
+        width: 87%;
+    }
+    button.btn-submit {
+        border-radius: 10px;
+    }
+}

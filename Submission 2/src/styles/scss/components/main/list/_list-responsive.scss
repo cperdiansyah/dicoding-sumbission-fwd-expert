@@ -1,0 +1,85 @@
+@media screen and (min-width: 425px) {
+    resto-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* minimal layar tablet */
+
+@media screen and (min-width: 768px) {
+    resto-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    resto-item.card {
+        img.img-card {
+            height: 180px;
+        }
+        div.text-card-wrapper {
+            div.card-description {
+                div.card-upper {
+                    p.resto-location {
+                        font-size: 15px;
+                    }
+
+                    div.rating {
+                        .rating-icon {
+                            color: #ffce31;
+                            font-size: 16px;
+                        }
+                        .rating-value {
+                            color: #152c5b;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                div.card-bottom {
+                    h3.resto-title {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+    h2.section-title {
+        font-size: 24px;
+    }
+}
+
+/* laptop dan PC */
+
+@media screen and (min-width: 1024px) {
+    resto-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    resto-item.card {
+        img.img-card {
+            height: 180px;
+        }
+        div.text-card-wrapper {
+            div.card-description {
+                div.card-upper {
+                    p.resto-location {
+                        font-size: 15px;
+                    }
+
+                    div.rating {
+                        .rating-icon {
+                            font-size: 20px;
+                        }
+                        .rating-value {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                div.card-bottom {
+                    h3.resto-title {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

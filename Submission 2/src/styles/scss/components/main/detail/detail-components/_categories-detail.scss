@@ -1,0 +1,29 @@
+.section-top-detail {
+    .address-categories {
+        padding-top: 0.325rem;
+        .address span {
+            font-size: 18px;
+            line-height: 27px;
+        }
+        .categories {
+            margin-left: 2rem;
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+            }
+            .category-item {
+                margin: 0 0.25rem;
+                font-size: 18px;
+                margin-top: auto;
+
+                .detail-category-item {
+                    color: #fff;
+                    min-height: 44px;
+                    min-width: 44px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
