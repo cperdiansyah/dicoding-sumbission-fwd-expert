@@ -21,11 +21,10 @@
 }
 
 #btn-back-to-top {
-    display: block;
     position: fixed;
     bottom: 15px;
     right: 15px;
-    z-index: 99;
+    // z-index: 9;
     border: none;
     outline: none;
     background-color: #ffaa00;
@@ -34,7 +33,7 @@
     padding: 10px 15px;
     border-radius: 50%;
     font-size: 18px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -43,7 +42,7 @@
     background-color: #ffc107;
 }
 #main-content {
-    margin-top: 4.5rem;
+    // margin-top: 4.5rem;
 }
 
 @import './components/header/header';
@@ -51,3 +50,6 @@
 @import './components/main/main';
 
 @import './components/footer/footer';
+
+/* Skeleton Style */
+@import './components/skeleton-loading/skeleton-loading';

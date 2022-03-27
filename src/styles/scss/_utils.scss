@@ -36,7 +36,7 @@ p {
 }
 
 .skip-link {
-    position: absolute;
+    position: unset;
     top: -80px;
     left: 0px;
     background-color: #ffaa00;
@@ -48,6 +48,7 @@ p {
 
 .skip-link:focus {
     top: 0px;
+    position: fixed;
 }
 
 body {
@@ -69,6 +70,7 @@ body {
     footer {
         :focus-visible {
             border: 2px solid $color-primary;
+            outline: none;
         }
     }
     .d-flex {

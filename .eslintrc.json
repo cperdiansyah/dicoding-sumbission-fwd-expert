@@ -17,6 +17,12 @@
     "linebreak-style": 0,
     "no-tabs": 0,
     "no-underscore-dangle": 0,
-    "eslint-disable  ": "indent"
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "no-undef": 0
   }
 }

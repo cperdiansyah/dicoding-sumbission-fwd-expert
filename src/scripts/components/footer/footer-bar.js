@@ -2,6 +2,7 @@ class FooterBar extends HTMLElement {
     connectedCallback() {
         this.render();
     }
+
     render() {
         this.innerHTML = `
         <div class="container">
@@ -47,12 +48,12 @@ class FooterBar extends HTMLElement {
 
                         <ul class="link-list">
                             <li class="link-item">
-                                <a href="mailto:support@makanin.id"
-                                    >support@makanin.id</a
+                                <a href="#">
+                                    support@makanin.id</a
                                 >
                             </li>
                             <li class="link-item">
-                                <a href="tel:622122081996">021 - 2208 - 1996</a>
+                                <a href="#">021 - 2208 - 1996</a>
                             </li>
                             <li class="link-item">
                                 <span>Singaparna, Tasikmalaya, Jawa Barat</span>

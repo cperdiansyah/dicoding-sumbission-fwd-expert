@@ -1,3 +1,37 @@
 .favorite-section {
     margin-top: 6rem;
 }
+
+.restaurant-list {
+    restaurant-container.skeleton-load {
+        display: block;
+
+        .card {
+            min-height: 296px;
+            height: auto;
+        }
+
+        .empty-restaurant-list {
+            img {
+                width: 300px;
+                min-height: 285.625px;
+                display: block;
+                margin: auto;
+            }
+            h2 {
+                text-align: center;
+                font-size: 1.5rem;
+                color: #34364a;
+            }
+
+            &.skeleton {
+                h2 {
+                    width: 298px;
+                    background-color: #eee;
+                    display: block;
+                    height: 72px;
+                }
+            }
+        }
+    }
+}

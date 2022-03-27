@@ -12,6 +12,7 @@
 
         position: fixed;
         width: -webkit-fill-available;
+        
         .app-bar__menu {
             display: flex;
             align-items: center;
@@ -45,6 +46,7 @@
                 font-size: 22px;
                 user-select: none;
                 font-weight: 500;
+                padding: 10px;
             }
         }
 
@@ -67,14 +69,14 @@
             ul li a {
                 display: inline-block;
                 text-decoration: none;
-                padding: 8px;
+                padding: 10px;
                 margin-bottom: 5px;
                 width: 100%;
 
                 font-size: 1.125rem;
                 color: #34364a;
                 font-weight: 500;
-                // padding: 1rem;
+                min-height: 44px;
 
                 &.active {
                     a {
@@ -83,5 +85,38 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .app-bar {
+        grid-template-columns: 1fr auto;
+        padding: 8px 32px;
+        .app-bar__brand h1 {
+            font-size: 1.5em;
+        }
+        .app-bar__menu {
+            display: none;
+        }
+        .app-bar__navigation {
+            position: static;
+            width: 100%;
+            filter: none;
+            ul li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    width: 120px;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .app-bar {
+        padding: 8px 83px;
     }
 }

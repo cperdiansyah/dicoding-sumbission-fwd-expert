@@ -5,6 +5,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 module.exports = {
     entry: path.resolve(__dirname, 'src/scripts/index.js'),
     output: {
@@ -50,11 +55,23 @@ module.exports = {
     },
     optimization: {
         splitChunks: {
+            chunks: 'all',
+            minSize: 20000,
+            maxSize: 70000,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            automaticNameDelimiter: '~',
+            enforceSizeThreshold: 50000,
             cacheGroups: {
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/, /// untuk membuat plugin yang ada di node_modules menjadi chunks
-                    name: 'vendor', /// nama bundlenya
-                    chunks: 'all' /// code yang ingin dipisahkan untuk contoh menggunakan semuanya
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
                 }
             }
         }
@@ -67,14 +84,25 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/public/'),
-                    to: path.resolve(__dirname, 'dist/'),
-                    noErrorOnMissing: true
+                    from: path.resolve(__dirname, 'src/public'),
+                    to: path.resolve(__dirname, 'dist')
                 }
             ]
         }),
         new ServiceWorkerWebpackPlugin({
-            entry: path.resolve(__dirname, 'src/scripts/sw.js')
+            entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+            output: path.resolve(__dirname, 'dist')
+        }),
+        new ImageminWebpackPlugin({
+            plugins: [
+                ImageminMozjpeg({
+                    quality: 50,
+                    progressive: true
+                })
+            ]
+        }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'disabled'
         })
     ]
 };

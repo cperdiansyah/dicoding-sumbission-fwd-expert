@@ -34,7 +34,7 @@
         padding: 6px 0;
         border: none;
 
-        menu-list {
+        menu-container {
             margin-top: 20px;
             display: grid;
             grid-template-columns: 1fr;
@@ -69,7 +69,7 @@
 
 @media screen and (min-width: 425px) {
     .tabcontent {
-        menu-list {
+        menu-container {
             grid-template-columns: repeat(2, 1fr);
 
             menu-item {
@@ -89,7 +89,7 @@
         margin: 0;
     }
     .tabcontent {
-        menu-list {
+        menu-container {
             grid-template-columns: repeat(3, 1fr);
         }
     }
@@ -97,7 +97,7 @@
 
 @media screen and (min-width: 768px) {
     .tabcontent {
-        menu-list {
+        menu-container {
             grid-template-columns: repeat(4, 1fr);
 
             menu-item {
@@ -117,7 +117,7 @@
 
 @media screen and (min-width: 1024px) {
     .tabcontent {
-        menu-list {
+        menu-container {
             grid-template-columns: repeat(5, 1fr);
 
             menu-item {

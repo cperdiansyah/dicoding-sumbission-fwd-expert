@@ -1,5 +1,3 @@
-/* Create custom element javascript */
-
 class AppBar extends HTMLElement {
     connectedCallback() {
         this.render();
@@ -9,7 +7,7 @@ class AppBar extends HTMLElement {
         this.innerHTML = `
 
         <div class="app-bar__menu">
-            <button id="hamburgerButton">☰</button>
+            <button id="hamburgerButton"  aria-label="hamburger-button">☰</button>
         </div>
 
         <div class="app-bar__brand">
@@ -22,7 +20,7 @@ class AppBar extends HTMLElement {
                 <li><a href="#/list">Home</a></li>
                 <li><a href="#/search">Search</a></li>
                 <li><a href="#/favorite">Favorite</a></li>
-                <li><a href="https://www.linkedin.com/in/cperdiansyah/" target="_blank"
+                <li><a href="https://www.linkedin.com/in/cperdiansyah/" target="_blank" rel="noreferrer"
                 >About Us</a></li>
             </ul>
         </nav>
