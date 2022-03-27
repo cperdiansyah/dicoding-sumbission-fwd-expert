@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "git.ignoreLimitWarning": true
+=======
+    "livePreview.defaultPreviewPath": "/src/templates/index.html"
+>>>>>>> submission-3
 }

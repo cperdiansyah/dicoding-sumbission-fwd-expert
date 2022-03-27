@@ -1,0 +1,54 @@
+@media screen and (min-width: 320px) {
+    restaurant-item.card.skeleton {
+        height: 234px;
+
+        div.text-card-wrapper {
+            div.card-description {
+                div.card-upper {
+                    p.resto-location {
+                        color: #b0b0b0;
+                        background-color: #eeee;
+                        width: 50%;
+                        height: 22px;
+                    }
+
+                    div.rating {
+                        display: flex;
+                        .rating-icon {
+                            color: #eeee;
+                            font-size: 16px;
+                        }
+                        span.rating-value {
+                            display: block;
+                            background-color: #eeee;
+                            width: 30px;
+                            height: 22px;
+                        }
+                    }
+                }
+                div.card-bottom {
+                    h3.resto-title {
+                        background-color: #eeee;
+                        width: 90%;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* minimal layar tablet */
+
+@media screen and (min-width: 768px) {
+    restaurant-item.card.skeleton {
+        height: 324px;
+    }
+}
+
+/* laptop dan PC */
+
+@media screen and (min-width: 1024px) {
+    restaurant-item.card.skeleton {
+        height: 296px;
+    }
+}

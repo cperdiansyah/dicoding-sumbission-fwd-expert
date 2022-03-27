@@ -1,0 +1,18 @@
+.skeleton-empty-restaurant-list {
+    height: 342px;
+
+    img {
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $text-dark;
+
+        width: 100%;
+        background: #eee;
+    }
+}
